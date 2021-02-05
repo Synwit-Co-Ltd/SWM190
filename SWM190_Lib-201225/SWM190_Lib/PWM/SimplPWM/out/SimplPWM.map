@@ -1,0 +1,474 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text) refers to system_swm190.o(.text) for SystemInit
+    main.o(.text) refers to swm190_pwm.o(.text) for PWM_Init
+    main.o(.text) refers to swm190_port.o(.text) for PORT_Init
+    main.o(.text) refers to swm190_adc.o(.text) for ADC_Init
+    main.o(.text) refers to swm190_dma.o(.text) for DMA_CH_Init
+    main.o(.text) refers to swm190_timr.o(.text) for TIMR_Init
+    main.o(.text) refers to main.o(.data) for .data
+    main.o(.text) refers to system_swm190.o(.data) for SystemCoreClock
+    swm190_gpio.o(.text) refers to swm190_port.o(.text) for PORT_Init
+    swm190_i2c.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm190_i2c.o(.text) refers to system_swm190.o(.data) for SystemCoreClock
+    swm190_pwm.o(.text) refers to swm190_pwm.o(.data) for .data
+    swm190_uart.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm190_uart.o(.text) refers to system_swm190.o(.data) for SystemCoreClock
+    swm190_spi.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm190_spi.o(.text) refers to system_swm190.o(.data) for SystemCoreClock
+    swm190_rtc.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy4
+    swm190_rtc.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm190_rtc.o(.text) refers to swm190_rtc.o(.constdata) for .constdata
+    system_swm190.o(.text) refers to system_swm190.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    system_swm190.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_swm190.o(.text) refers to swm190_port.o(.text) for PORT_Init
+    system_swm190.o(.text) refers to system_swm190.o(.data) for .data
+    startup_swm190.o(RESET) refers to startup_swm190.o(STACK) for __initial_sp
+    startup_swm190.o(RESET) refers to startup_swm190.o(.text) for Reset_Handler
+    startup_swm190.o(RESET) refers to main.o(.text) for DMA_Handler
+    startup_swm190.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_swm190.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_swm190.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing swm190_adc.o(.rev16_text), (4 bytes).
+    Removing swm190_adc.o(.revsh_text), (4 bytes).
+    Removing swm190_exti.o(.rev16_text), (4 bytes).
+    Removing swm190_exti.o(.revsh_text), (4 bytes).
+    Removing swm190_exti.o(.text), (150 bytes).
+    Removing swm190_gpio.o(.rev16_text), (4 bytes).
+    Removing swm190_gpio.o(.revsh_text), (4 bytes).
+    Removing swm190_gpio.o(.text), (468 bytes).
+    Removing swm190_i2c.o(.rev16_text), (4 bytes).
+    Removing swm190_i2c.o(.revsh_text), (4 bytes).
+    Removing swm190_i2c.o(.text), (576 bytes).
+    Removing swm190_pwm.o(.rev16_text), (4 bytes).
+    Removing swm190_pwm.o(.revsh_text), (4 bytes).
+    Removing swm190_timr.o(.rev16_text), (4 bytes).
+    Removing swm190_timr.o(.revsh_text), (4 bytes).
+    Removing swm190_uart.o(.rev16_text), (4 bytes).
+    Removing swm190_uart.o(.revsh_text), (4 bytes).
+    Removing swm190_uart.o(.text), (920 bytes).
+    Removing swm190_wdt.o(.rev16_text), (4 bytes).
+    Removing swm190_wdt.o(.revsh_text), (4 bytes).
+    Removing swm190_wdt.o(.text), (128 bytes).
+    Removing swm190_dma.o(.rev16_text), (4 bytes).
+    Removing swm190_dma.o(.revsh_text), (4 bytes).
+    Removing swm190_flash.o(.rev16_text), (4 bytes).
+    Removing swm190_flash.o(.revsh_text), (4 bytes).
+    Removing swm190_flash.o(.text), (220 bytes).
+    Removing swm190_port.o(.rev16_text), (4 bytes).
+    Removing swm190_port.o(.revsh_text), (4 bytes).
+    Removing swm190_spi.o(.rev16_text), (4 bytes).
+    Removing swm190_spi.o(.revsh_text), (4 bytes).
+    Removing swm190_spi.o(.text), (1040 bytes).
+    Removing swm190_rtc.o(.rev16_text), (4 bytes).
+    Removing swm190_rtc.o(.revsh_text), (4 bytes).
+    Removing swm190_rtc.o(.text), (644 bytes).
+    Removing swm190_rtc.o(.constdata), (52 bytes).
+    Removing system_swm190.o(.rev16_text), (4 bytes).
+    Removing system_swm190.o(.revsh_text), (4 bytes).
+    Removing startup_swm190.o(HEAP), (0 bytes).
+
+40 unused section(s) (total 4318 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      256  startup_swm190.o(RESET)
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM190.s 0x00000000   Number         0  startup_swm190.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\CMSIS\DeviceSupport\system_SWM190.c 0x00000000   Number         0  system_swm190.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_adc.c 0x00000000   Number         0  swm190_adc.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_dma.c 0x00000000   Number         0  swm190_dma.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_exti.c 0x00000000   Number         0  swm190_exti.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_flash.c 0x00000000   Number         0  swm190_flash.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_gpio.c 0x00000000   Number         0  swm190_gpio.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_i2c.c 0x00000000   Number         0  swm190_i2c.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_port.c 0x00000000   Number         0  swm190_port.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_pwm.c 0x00000000   Number         0  swm190_pwm.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_rtc.c 0x00000000   Number         0  swm190_rtc.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_spi.c 0x00000000   Number         0  swm190_spi.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_timr.c 0x00000000   Number         0  swm190_timr.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_uart.c 0x00000000   Number         0  swm190_uart.o ABSOLUTE
+    ..\..\SWM190_StdPeriph_Driver\CSL\SWM190_StdPeriph_Driver\SWM190_wdt.c 0x00000000   Number         0  swm190_wdt.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\CMSIS\\DeviceSupport\\system_SWM190.c 0x00000000   Number         0  system_swm190.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_adc.c 0x00000000   Number         0  swm190_adc.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_dma.c 0x00000000   Number         0  swm190_dma.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_exti.c 0x00000000   Number         0  swm190_exti.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_flash.c 0x00000000   Number         0  swm190_flash.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_gpio.c 0x00000000   Number         0  swm190_gpio.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_i2c.c 0x00000000   Number         0  swm190_i2c.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_port.c 0x00000000   Number         0  swm190_port.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_pwm.c 0x00000000   Number         0  swm190_pwm.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_rtc.c 0x00000000   Number         0  swm190_rtc.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_spi.c 0x00000000   Number         0  swm190_spi.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_timr.c 0x00000000   Number         0  swm190_timr.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_uart.c 0x00000000   Number         0  swm190_uart.o ABSOLUTE
+    ..\\..\\SWM190_StdPeriph_Driver\\CSL\\SWM190_StdPeriph_Driver\\SWM190_wdt.c 0x00000000   Number         0  swm190_wdt.o ABSOLUTE
+    app\\main.c                              0x00000000   Number         0  main.o ABSOLUTE
+    app\main.c                               0x00000000   Number         0  main.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x00000100   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000100   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000104   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000108   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x00000108   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x00000108   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000110   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000110   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000110   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000110   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000114   Section        0  main.o(.text)
+    .text                                    0x00000234   Section        0  swm190_adc.o(.text)
+    chn2idx                                  0x0000038f   Thumb Code    66  swm190_adc.o(.text)
+    .text                                    0x000004e8   Section        0  swm190_pwm.o(.text)
+    NVIC_EnableIRQ                           0x00000f59   Thumb Code    14  swm190_pwm.o(.text)
+    .text                                    0x00000f7c   Section        0  swm190_timr.o(.text)
+    NVIC_EnableIRQ                           0x00001383   Thumb Code    14  swm190_timr.o(.text)
+    .text                                    0x00001394   Section        0  swm190_dma.o(.text)
+    .text                                    0x000014a4   Section        0  swm190_port.o(.text)
+    .text                                    0x000014f4   Section        0  system_swm190.o(.text)
+    .text                                    0x000017a0   Section      132  startup_swm190.o(.text)
+    .text                                    0x00001824   Section        0  uidiv.o(.text)
+    .text                                    0x00001850   Section       36  init.o(.text)
+    i.__ARM_common_switch8                   0x00001874   Section        0  system_swm190.o(i.__ARM_common_switch8)
+    i.__scatterload_copy                     0x0000188e   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000189c   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0000189e   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .data                                    0x20000000   Section       16  main.o(.data)
+    .data                                    0x20000010   Section       32  swm190_pwm.o(.data)
+    .data                                    0x20000030   Section        8  system_swm190.o(.data)
+    STACK                                    0x20000038   Section     1024  startup_swm190.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_swm190.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x00000100   Data           0  startup_swm190.o(RESET)
+    __Vectors_Size                           0x00000100   Number         0  startup_swm190.o ABSOLUTE
+    __main                                   0x00000101   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000101   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000105   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000109   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000109   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x00000109   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x00000109   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000111   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000111   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    main                                     0x00000115   Thumb Code   208  main.o(.text)
+    DMA_Handler                              0x000001e5   Thumb Code    26  main.o(.text)
+    ADC1_GPIOA14_Handler                     0x000001ff   Thumb Code     8  main.o(.text)
+    TIMR2_GPIOA15_Handler                    0x00000207   Thumb Code    10  main.o(.text)
+    ADC_Close                                0x00000235   Thumb Code    12  swm190_adc.o(.text)
+    ADC_Init                                 0x00000241   Thumb Code   302  swm190_adc.o(.text)
+    ADC_Open                                 0x0000036f   Thumb Code    12  swm190_adc.o(.text)
+    ADC_Start                                0x0000037b   Thumb Code    10  swm190_adc.o(.text)
+    ADC_Stop                                 0x00000385   Thumb Code    10  swm190_adc.o(.text)
+    ADC_Read                                 0x000003d1   Thumb Code    26  swm190_adc.o(.text)
+    ADC_IsEOC                                0x000003eb   Thumb Code    22  swm190_adc.o(.text)
+    ADC_ChnSelect                            0x00000401   Thumb Code    16  swm190_adc.o(.text)
+    ADC_IntEOCEn                             0x00000411   Thumb Code    24  swm190_adc.o(.text)
+    ADC_IntEOCDis                            0x00000429   Thumb Code    24  swm190_adc.o(.text)
+    ADC_IntEOCClr                            0x00000441   Thumb Code    20  swm190_adc.o(.text)
+    ADC_IntEOCStat                           0x00000455   Thumb Code    30  swm190_adc.o(.text)
+    ADC_IntOVFEn                             0x00000473   Thumb Code    26  swm190_adc.o(.text)
+    ADC_IntOVFDis                            0x0000048d   Thumb Code    26  swm190_adc.o(.text)
+    ADC_IntOVFClr                            0x000004a7   Thumb Code    22  swm190_adc.o(.text)
+    ADC_IntOVFStat                           0x000004bd   Thumb Code    32  swm190_adc.o(.text)
+    PWM_Stop                                 0x000004e9   Thumb Code   128  swm190_pwm.o(.text)
+    PWM_Init                                 0x00000569   Thumb Code   918  swm190_pwm.o(.text)
+    PWM_Start                                0x000008ff   Thumb Code   128  swm190_pwm.o(.text)
+    PWM_SetCycle                             0x0000097f   Thumb Code    18  swm190_pwm.o(.text)
+    PWM_GetCycle                             0x00000991   Thumb Code    18  swm190_pwm.o(.text)
+    PWM_SetHDuty                             0x000009a3   Thumb Code    22  swm190_pwm.o(.text)
+    PWM_GetHDuty                             0x000009b9   Thumb Code    22  swm190_pwm.o(.text)
+    PWM_SetDeadzone                          0x000009cf   Thumb Code    18  swm190_pwm.o(.text)
+    PWM_GetDeadzone                          0x000009e1   Thumb Code    22  swm190_pwm.o(.text)
+    PWM_IntNCycleEn                          0x000009f7   Thumb Code   122  swm190_pwm.o(.text)
+    PWM_IntNCycleDis                         0x00000a71   Thumb Code   122  swm190_pwm.o(.text)
+    PWM_IntNCycleClr                         0x00000aeb   Thumb Code    90  swm190_pwm.o(.text)
+    PWM_IntNCycleStat                        0x00000b45   Thumb Code   110  swm190_pwm.o(.text)
+    PWM_IntHEndEn                            0x00000bb3   Thumb Code   138  swm190_pwm.o(.text)
+    PWM_IntHEndDis                           0x00000c3d   Thumb Code   138  swm190_pwm.o(.text)
+    PWM_IntHEndClr                           0x00000cc7   Thumb Code   104  swm190_pwm.o(.text)
+    PWM_IntHEndStat                          0x00000d2f   Thumb Code   110  swm190_pwm.o(.text)
+    PWM_IntHCycleEn                          0x00000d9d   Thumb Code   122  swm190_pwm.o(.text)
+    PWM_IntHCycleDis                         0x00000e17   Thumb Code   122  swm190_pwm.o(.text)
+    PWM_IntHCycleClr                         0x00000e91   Thumb Code    90  swm190_pwm.o(.text)
+    PWM_IntHCycleStat                        0x00000eeb   Thumb Code   110  swm190_pwm.o(.text)
+    TIMR_Stop                                0x00000f7d   Thumb Code   120  swm190_timr.o(.text)
+    TIMR_Init                                0x00000ff5   Thumb Code   320  swm190_timr.o(.text)
+    TIMR_Start                               0x00001135   Thumb Code   118  swm190_timr.o(.text)
+    TIMR_Halt                                0x000011ab   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_Resume                              0x000011b1   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_SetPeriod                           0x000011b7   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_GetPeriod                           0x000011bd   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_GetCurValue                         0x000011c3   Thumb Code     4  swm190_timr.o(.text)
+    TIMR_INTEn                               0x000011c7   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_INTDis                              0x000011d1   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_INTClr                              0x000011db   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_INTStat                             0x000011e1   Thumb Code     8  swm190_timr.o(.text)
+    TIMR_OC_Init                             0x000011e9   Thumb Code   114  swm190_timr.o(.text)
+    TIMR_OC_OutputEn                         0x0000125b   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_OC_OutputDis                        0x00001265   Thumb Code    32  swm190_timr.o(.text)
+    TIMR_OC_SetMatch                         0x00001285   Thumb Code     4  swm190_timr.o(.text)
+    TIMR_OC_GetMatch                         0x00001289   Thumb Code     4  swm190_timr.o(.text)
+    TIMR_OC_INTEn                            0x0000128d   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_OC_INTDis                           0x00001297   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_OC_INTClr                           0x000012a1   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_OC_INTStat                          0x000012a7   Thumb Code     8  swm190_timr.o(.text)
+    TIMR_IC_Init                             0x000012af   Thumb Code   116  swm190_timr.o(.text)
+    TIMR_IC_GetCaptureH                      0x00001323   Thumb Code     4  swm190_timr.o(.text)
+    TIMR_IC_GetCaptureL                      0x00001327   Thumb Code     4  swm190_timr.o(.text)
+    TIMR_IC_CaptureH_INTEn                   0x0000132b   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_IC_CaptureH_INTDis                  0x00001335   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_IC_CaptureH_INTClr                  0x0000133f   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_IC_CaptureH_INTStat                 0x00001345   Thumb Code     8  swm190_timr.o(.text)
+    TIMR_IC_CaptureL_INTEn                   0x0000134d   Thumb Code    10  swm190_timr.o(.text)
+    TIMR_IC_CaptureL_INTDis                  0x00001357   Thumb Code    30  swm190_timr.o(.text)
+    TIMR_IC_CaptureL_INTClr                  0x00001375   Thumb Code     6  swm190_timr.o(.text)
+    TIMR_IC_CaptureL_INTStat                 0x0000137b   Thumb Code     8  swm190_timr.o(.text)
+    DMA_CH_Close                             0x00001395   Thumb Code    18  swm190_dma.o(.text)
+    DMA_CH_Init                              0x000013a7   Thumb Code   170  swm190_dma.o(.text)
+    DMA_CH_Open                              0x00001451   Thumb Code    18  swm190_dma.o(.text)
+    DMA_CH_INTEn                             0x00001463   Thumb Code    14  swm190_dma.o(.text)
+    DMA_CH_INTDis                            0x00001471   Thumb Code    14  swm190_dma.o(.text)
+    DMA_CH_INTClr                            0x0000147f   Thumb Code    10  swm190_dma.o(.text)
+    DMA_CH_INTStat                           0x00001489   Thumb Code    20  swm190_dma.o(.text)
+    PORT_Init                                0x000014a5   Thumb Code    80  swm190_port.o(.text)
+    SystemCoreClockUpdate                    0x000014f5   Thumb Code   148  system_swm190.o(.text)
+    switchTo24MHz                            0x00001589   Thumb Code    16  system_swm190.o(.text)
+    switchToXTAL_32K                         0x00001599   Thumb Code    72  system_swm190.o(.text)
+    switchTo32KHz                            0x000015e1   Thumb Code    48  system_swm190.o(.text)
+    PLLInit                                  0x00001611   Thumb Code    56  system_swm190.o(.text)
+    switchToPLL                              0x00001649   Thumb Code    64  system_swm190.o(.text)
+    switchToXTAL                             0x00001689   Thumb Code   110  system_swm190.o(.text)
+    switchTo48MHz                            0x000016f7   Thumb Code    18  system_swm190.o(.text)
+    switchTo6MHz                             0x00001709   Thumb Code    46  system_swm190.o(.text)
+    switchTo3MHz                             0x00001737   Thumb Code    46  system_swm190.o(.text)
+    SystemInit                               0x00001765   Thumb Code    24  system_swm190.o(.text)
+    Reset_Handler                            0x000017a1   Thumb Code    54  startup_swm190.o(.text)
+    NMI_Handler                              0x000017d7   Thumb Code     2  startup_swm190.o(.text)
+    HardFault_Handler                        0x000017d9   Thumb Code     2  startup_swm190.o(.text)
+    SVC_Handler                              0x000017db   Thumb Code     2  startup_swm190.o(.text)
+    PendSV_Handler                           0x000017dd   Thumb Code     2  startup_swm190.o(.text)
+    SysTick_Handler                          0x000017df   Thumb Code     2  startup_swm190.o(.text)
+    GPIOA_Handler                            0x000017e1   Thumb Code     2  startup_swm190.o(.text)
+    GPIOA0_Handler                           0x000017e3   Thumb Code     2  startup_swm190.o(.text)
+    UART0_Handler                            0x000017e5   Thumb Code     2  startup_swm190.o(.text)
+    UART1_Handler                            0x000017e7   Thumb Code     2  startup_swm190.o(.text)
+    SPI0_Handler                             0x000017e9   Thumb Code     2  startup_swm190.o(.text)
+    TIMR0_Handler                            0x000017eb   Thumb Code     2  startup_swm190.o(.text)
+    PWM0_Handler                             0x000017ef   Thumb Code     2  startup_swm190.o(.text)
+    BTIMR0_Handler                           0x000017f1   Thumb Code     2  startup_swm190.o(.text)
+    BTIMR3_Handler                           0x000017f3   Thumb Code     2  startup_swm190.o(.text)
+    TIMR1_Handler                            0x000017f5   Thumb Code     2  startup_swm190.o(.text)
+    WDT_Handler                              0x000017f7   Thumb Code     2  startup_swm190.o(.text)
+    GPIOA4_Handler                           0x000017f9   Thumb Code     2  startup_swm190.o(.text)
+    I2C0_Handler                             0x000017fb   Thumb Code     2  startup_swm190.o(.text)
+    GPIOA5_Handler                           0x000017fd   Thumb Code     2  startup_swm190.o(.text)
+    BTIMR2_Handler                           0x000017ff   Thumb Code     2  startup_swm190.o(.text)
+    GPIOC_CORDIC_Handler                     0x00001801   Thumb Code     2  startup_swm190.o(.text)
+    SPI1_BTIMR1_Handler                      0x00001803   Thumb Code     2  startup_swm190.o(.text)
+    GPIOB_BOD_Handler                        0x00001805   Thumb Code     2  startup_swm190.o(.text)
+    GPIOC4_ADC0_Handler                      0x00001807   Thumb Code     2  startup_swm190.o(.text)
+    GPIOD_RTC_Handler                        0x00001809   Thumb Code     2  startup_swm190.o(.text)
+    XTAL_ACMP_Handler                        0x0000180b   Thumb Code     2  startup_swm190.o(.text)
+    UART2_GPIOB4_Handler                     0x0000180d   Thumb Code     2  startup_swm190.o(.text)
+    TIMR3_HALL_Handler                       0x00001811   Thumb Code     2  startup_swm190.o(.text)
+    GPIOC5_I2C1_Handler                      0x00001813   Thumb Code     2  startup_swm190.o(.text)
+    PWM1_GPIOB6_Handler                      0x00001815   Thumb Code     2  startup_swm190.o(.text)
+    UART3_GPIOB5_Handler                     0x00001817   Thumb Code     2  startup_swm190.o(.text)
+    PWM2_SFC_Handler                         0x00001819   Thumb Code     2  startup_swm190.o(.text)
+    PWM3_CACHE_Handler                       0x0000181b   Thumb Code     2  startup_swm190.o(.text)
+    GPIOE_PWMHALT_Handler                    0x0000181f   Thumb Code     2  startup_swm190.o(.text)
+    __aeabi_uidiv                            0x00001825   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00001825   Thumb Code    44  uidiv.o(.text)
+    __scatterload                            0x00001851   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00001851   Thumb Code     0  init.o(.text)
+    __ARM_common_switch8                     0x00001875   Thumb Code    26  system_swm190.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x0000188f   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000189d   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0000189f   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x000018ac   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000018cc   Number         0  anon$$obj.o(Region$$Table)
+    Buf_Test                                 0x20000000   Data          16  main.o(.data)
+    PWMX                                     0x20000010   Data          32  swm190_pwm.o(.data)
+    SystemCoreClock                          0x20000030   Data           4  system_swm190.o(.data)
+    CyclesPerUs                              0x20000034   Data           4  system_swm190.o(.data)
+    __initial_sp                             0x20000438   Data           0  startup_swm190.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000101
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00001904, Max: 0x0001e000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000018cc, Max: 0x0001e000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000100   Data   RO          401    RESET               startup_swm190.o
+    0x00000100   0x00000100   0x00000000   Code   RO          406  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x00000100   0x00000100   0x00000004   Code   RO          415    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x00000104   0x00000104   0x00000004   Code   RO          418    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x00000108   0x00000108   0x00000000   Code   RO          420    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x00000108   0x00000108   0x00000000   Code   RO          422    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x00000108   0x00000108   0x00000008   Code   RO          423    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x00000110   0x00000110   0x00000000   Code   RO          425    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x00000110   0x00000110   0x00000000   Code   RO          427    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x00000110   0x00000110   0x00000004   Code   RO          416    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x00000114   0x00000114   0x00000120   Code   RO            3    .text               main.o
+    0x00000234   0x00000234   0x000002b4   Code   RO          103    .text               swm190_adc.o
+    0x000004e8   0x000004e8   0x00000a94   Code   RO          189    .text               swm190_pwm.o
+    0x00000f7c   0x00000f7c   0x00000418   Code   RO          212    .text               swm190_timr.o
+    0x00001394   0x00001394   0x00000110   Code   RO          272    .text               swm190_dma.o
+    0x000014a4   0x000014a4   0x00000050   Code   RO          312    .text               swm190_port.o
+    0x000014f4   0x000014f4   0x000002ac   Code   RO          373    .text               system_swm190.o
+    0x000017a0   0x000017a0   0x00000084   Code   RO          402    .text               startup_swm190.o
+    0x00001824   0x00001824   0x0000002c   Code   RO          409    .text               mc_p.l(uidiv.o)
+    0x00001850   0x00001850   0x00000024   Code   RO          429    .text               mc_p.l(init.o)
+    0x00001874   0x00001874   0x0000001a   Code   RO          391    i.__ARM_common_switch8  system_swm190.o
+    0x0000188e   0x0000188e   0x0000000e   Code   RO          433    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x0000189c   0x0000189c   0x00000002   Code   RO          434    i.__scatterload_null  mc_p.l(handlers.o)
+    0x0000189e   0x0000189e   0x0000000e   Code   RO          435    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x000018ac   0x000018ac   0x00000020   Data   RO          431    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000018cc, Size: 0x00000438, Max: 0x00005000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x000018cc   0x00000010   Data   RW            4    .data               main.o
+    0x20000010   0x000018dc   0x00000020   Data   RW          190    .data               swm190_pwm.o
+    0x20000030   0x000018fc   0x00000008   Data   RW          374    .data               system_swm190.o
+    0x20000038        -       0x00000400   Zero   RW          399    STACK               startup_swm190.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       288         36          0         16          0      71005   main.o
+       132          4        256          0       1024       2080   startup_swm190.o
+       692         12          0          0          0      10838   swm190_adc.o
+       272          8          0          0          0       2295   swm190_dma.o
+        80          0          0          0          0       1260   swm190_port.o
+      2708         50          0         32          0       8605   swm190_pwm.o
+      1048         24          0          0          0       7445   swm190_timr.o
+       710         44          0          8          0       2747   system_swm190.o
+
+    ----------------------------------------------------------------------
+      5930        178        288         56       1024     106275   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        44          0          0          0          0         72   uidiv.o
+
+    ----------------------------------------------------------------------
+       130         16          0          0          0        140   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       130         16          0          0          0        140   mc_p.l
+
+    ----------------------------------------------------------------------
+       130         16          0          0          0        140   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6060        194        288         56       1024     105951   Grand Totals
+      6060        194        288         56       1024     105951   ELF Image Totals
+      6060        194        288         56          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 6348 (   6.20kB)
+    Total RW  Size (RW Data + ZI Data)              1080 (   1.05kB)
+    Total ROM Size (Code + RO Data + RW Data)       6404 (   6.25kB)
+
+==============================================================================
+

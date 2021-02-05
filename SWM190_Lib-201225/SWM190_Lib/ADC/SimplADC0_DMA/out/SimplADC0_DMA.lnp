@@ -1,0 +1,22 @@
+--cpu Cortex-M0
+".\out\main.o"
+".\out\swm190_adc.o"
+".\out\swm190_exti.o"
+".\out\swm190_gpio.o"
+".\out\swm190_i2c.o"
+".\out\swm190_pwm.o"
+".\out\swm190_timr.o"
+".\out\swm190_uart.o"
+".\out\swm190_wdt.o"
+".\out\swm190_dma.o"
+".\out\swm190_flash.o"
+".\out\swm190_port.o"
+".\out\swm190_spi.o"
+".\out\swm190_rtc.o"
+".\out\swm190_cordic.o"
+".\out\system_swm190.o"
+".\out\startup_swm190.o"
+--library_type=microlib --strict --scatter ".\out\SimplADC0_DMA.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\out\SimplADC0_DMA.map" -o .\out\SimplADC0_DMA.axf
